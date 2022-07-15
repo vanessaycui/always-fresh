@@ -73,6 +73,24 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="F8Y-wP-QDM">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.80392156859999997" green="0.94117647059999998" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.59515822819999997" green="0.69802230750000005" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="1NU-Mu-vTL" kind="relationship" relationship="rootViewController" id="nwo-WE-IBg"/>
@@ -98,10 +116,13 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6A-Oi-nkV">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="194"/>
-                                                <color key="tintColor" red="0.57605396630000005" green="0.46843175549999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="My Food">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="baseForegroundColor" red="0.59515822819999997" green="0.69802230750000005" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="goToItems:" destination="1NU-Mu-vTL" eventType="touchUpInside" id="kB0-wa-rMV"/>
@@ -109,10 +130,12 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjk-G0-blw">
                                                 <rect key="frame" x="0.0" y="214" width="314" height="194"/>
-                                                <color key="tintColor" red="0.57605396630000005" green="0.46843175549999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Recipes">
+                                                <buttonConfiguration key="configuration" style="filled" image="text.book.closed.fill" catalog="system" title="Recipes">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="baseForegroundColor" red="0.59515822819999997" green="0.69802230750000005" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="goToRecipes:" destination="1NU-Mu-vTL" eventType="touchUpInside" id="SMl-vE-MGS"/>
@@ -120,10 +143,12 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08K-nU-5rp">
                                                 <rect key="frame" x="0.0" y="428" width="314" height="194"/>
-                                                <color key="tintColor" red="0.57605396630000005" green="0.46843175549999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Scan Your Recipt">
+                                                <buttonConfiguration key="configuration" style="filled" image="square.and.arrow.down.fill" catalog="system" title="Scan Your Recipt">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="baseForegroundColor" red="0.59515822819999997" green="0.69802230750000005" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -131,13 +156,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ksg-jp-2z5"/>
+                        <viewLayoutGuide key="safeArea" id="QTe-wO-VWz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ksg-jp-2z5" firstAttribute="bottom" secondItem="GRb-2n-bPX" secondAttribute="bottom" constant="50" id="2ot-73-7dU"/>
-                            <constraint firstItem="Ksg-jp-2z5" firstAttribute="trailing" secondItem="GRb-2n-bPX" secondAttribute="trailing" constant="50" id="Xth-Sw-giE"/>
-                            <constraint firstItem="GRb-2n-bPX" firstAttribute="leading" secondItem="Ksg-jp-2z5" secondAttribute="leading" constant="50" id="awO-Mr-Xpq"/>
-                            <constraint firstItem="GRb-2n-bPX" firstAttribute="top" secondItem="Ksg-jp-2z5" secondAttribute="top" constant="50" id="y5w-pZ-91W"/>
+                            <constraint firstItem="QTe-wO-VWz" firstAttribute="bottom" secondItem="GRb-2n-bPX" secondAttribute="bottom" constant="50" id="2ot-73-7dU"/>
+                            <constraint firstItem="QTe-wO-VWz" firstAttribute="trailing" secondItem="GRb-2n-bPX" secondAttribute="trailing" constant="50" id="Xth-Sw-giE"/>
+                            <constraint firstItem="GRb-2n-bPX" firstAttribute="leading" secondItem="QTe-wO-VWz" secondAttribute="leading" constant="50" id="awO-Mr-Xpq"/>
+                            <constraint firstItem="GRb-2n-bPX" firstAttribute="top" secondItem="QTe-wO-VWz" secondAttribute="top" constant="50" id="y5w-pZ-91W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Always Fresh" id="8Sd-Lb-kPr"/>
@@ -154,7 +179,10 @@
             <point key="canvasLocation" x="28.985507246376812" y="-329.46428571428572"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.57605396630000005" green="0.46843175549999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <image name="text.book.closed.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
