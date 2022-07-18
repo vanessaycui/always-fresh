@@ -18,6 +18,7 @@
 		231FCD892880B59E0064AAF9 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231FCD882880B59E0064AAF9 /* ItemViewController.swift */; };
 		232DDF062884F6D800457F3F /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232DDF042884F6D800457F3F /* ItemCell.swift */; };
 		232DDF072884F6D800457F3F /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232DDF052884F6D800457F3F /* ItemCell.xib */; };
+		23D319CF2885DAC900B053CB /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D319CE2885DAC900B053CB /* addItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		231FCD882880B59E0064AAF9 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		232DDF042884F6D800457F3F /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		232DDF052884F6D800457F3F /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		23D319CE2885DAC900B053CB /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				231FCD6E2880A56B0064AAF9 /* ViewController.swift */,
 				231FCD862880B5860064AAF9 /* RecipeViewController.swift */,
 				231FCD882880B59E0064AAF9 /* ItemViewController.swift */,
+				23D319CE2885DAC900B053CB /* addItemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				231FCD872880B5860064AAF9 /* RecipeViewController.swift in Sources */,
 				231FCD6B2880A56B0064AAF9 /* AppDelegate.swift in Sources */,
 				232DDF062884F6D800457F3F /* ItemCell.swift in Sources */,
+				23D319CF2885DAC900B053CB /* addItemViewController.swift in Sources */,
 				231FCD6D2880A56B0064AAF9 /* SceneDelegate.swift in Sources */,
 				231FCD892880B59E0064AAF9 /* ItemViewController.swift in Sources */,
 			);
