@@ -56,49 +56,10 @@ class ItemViewController: UITableViewController {
 
     //MARK: - ADD NEW ITEMS
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        var itemField = UITextField()
-        var dateField = UITextField()
-        var quantityField = UITextField()
-        var unitField = UITextField()
-        //pop-up
-        let alert = UIAlertController(title:"Add New Food Item", message: "", preferredStyle: .alert)
-        //button
-        let action = UIAlertAction(title: "Add", style: .default) { action in
-            let newItem = Item(context:self.context)
-            newItem.title = itemField.text!
-            newItem.expiryDate = dateField.text!
-            newItem.quantity = quantityField.text!
-            newItem.units = unitField.text!
-            newItem.done = false
-            self.itemArray.append(newItem)
-            self.saveItems()
-        }
         
-        //textfield
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Add new Item"
-            //extract the textfield inputs to local variable so it can be used outside of this scope.
-            itemField = alertTextField
-        }
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Add Expiry Date: DD/MM/YYY"
-            //extract the textfield inputs to local variable so it can be used outside of this scope.
-            dateField = alertTextField
-        }
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Quantity"
-            //extract the textfield inputs to local variable so it can be used outside of this scope.
-            quantityField = alertTextField
-        }
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Quantity Units"
-            //extract the textfield inputs to local variable so it can be used outside of this scope.
-            unitField = alertTextField
-        }
-        
-        alert.addAction(action)
-        present(alert, animated: true, completion:nil)
+        performSegue(withIdentifier: "goToAddItem", sender: self)
     }
+
 
         
 
