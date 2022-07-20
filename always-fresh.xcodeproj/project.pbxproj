@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A52FAC6E4CF64CFCE27CAED /* Pods_always_fresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8750456A33FE430F67430DB /* Pods_always_fresh.framework */; };
 		231FCD6B2880A56B0064AAF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231FCD6A2880A56B0064AAF9 /* AppDelegate.swift */; };
 		231FCD6D2880A56B0064AAF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231FCD6C2880A56B0064AAF9 /* SceneDelegate.swift */; };
 		231FCD6F2880A56B0064AAF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231FCD6E2880A56B0064AAF9 /* ViewController.swift */; };
@@ -18,7 +19,10 @@
 		231FCD892880B59E0064AAF9 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231FCD882880B59E0064AAF9 /* ItemViewController.swift */; };
 		232DDF062884F6D800457F3F /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232DDF042884F6D800457F3F /* ItemCell.swift */; };
 		232DDF072884F6D800457F3F /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232DDF052884F6D800457F3F /* ItemCell.xib */; };
+		2397EC522887C8EE002C065F /* UpdateItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397EC512887C8EE002C065F /* UpdateItemViewController.swift */; };
+		2397EC542887CF05002C065F /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397EC532887CF05002C065F /* SwipeTableViewController.swift */; };
 		23D319CF2885DAC900B053CB /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D319CE2885DAC900B053CB /* addItemViewController.swift */; };
+		23D319D12886160400B053CB /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D319D02886160400B053CB /* ItemManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +39,13 @@
 		231FCD882880B59E0064AAF9 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		232DDF042884F6D800457F3F /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		232DDF052884F6D800457F3F /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		2397EC512887C8EE002C065F /* UpdateItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemViewController.swift; sourceTree = "<group>"; };
+		2397EC532887CF05002C065F /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		23D319CE2885DAC900B053CB /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
+		23D319D02886160400B053CB /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		D063FA8FA845F5394175F2AF /* Pods-always-fresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-always-fresh.debug.xcconfig"; path = "Target Support Files/Pods-always-fresh/Pods-always-fresh.debug.xcconfig"; sourceTree = "<group>"; };
+		E90378FF1363710B6B5D0497 /* Pods-always-fresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-always-fresh.release.xcconfig"; path = "Target Support Files/Pods-always-fresh/Pods-always-fresh.release.xcconfig"; sourceTree = "<group>"; };
+		F8750456A33FE430F67430DB /* Pods_always_fresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_always_fresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A52FAC6E4CF64CFCE27CAED /* Pods_always_fresh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +67,8 @@
 				231FCD6C2880A56B0064AAF9 /* SceneDelegate.swift */,
 				231FCD692880A56B0064AAF9 /* always-fresh */,
 				231FCD682880A56B0064AAF9 /* Products */,
+				DEE64B0107173A0886929C7D /* Pods */,
+				7271A7EBD58071F4E05BB9FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,12 +83,11 @@
 		231FCD692880A56B0064AAF9 /* always-fresh */ = {
 			isa = PBXGroup;
 			children = (
-				231FCD832880B4C40064AAF9 /* Controller */,
 				231FCD822880B4BF0064AAF9 /* Model */,
 				231FCD812880B4B80064AAF9 /* View */,
+				231FCD832880B4C40064AAF9 /* Controller */,
 				231FCD762880A56E0064AAF9 /* Assets.xcassets */,
 				231FCD7B2880A56E0064AAF9 /* Info.plist */,
-				231FCD732880A56B0064AAF9 /* always_fresh.xcdatamodeld */,
 			);
 			path = "always-fresh";
 			sourceTree = "<group>";
@@ -94,6 +106,8 @@
 		231FCD822880B4BF0064AAF9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				231FCD732880A56B0064AAF9 /* always_fresh.xcdatamodeld */,
+				23D319D02886160400B053CB /* ItemManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,8 +119,27 @@
 				231FCD862880B5860064AAF9 /* RecipeViewController.swift */,
 				231FCD882880B59E0064AAF9 /* ItemViewController.swift */,
 				23D319CE2885DAC900B053CB /* addItemViewController.swift */,
+				2397EC512887C8EE002C065F /* UpdateItemViewController.swift */,
+				2397EC532887CF05002C065F /* SwipeTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7271A7EBD58071F4E05BB9FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8750456A33FE430F67430DB /* Pods_always_fresh.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEE64B0107173A0886929C7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D063FA8FA845F5394175F2AF /* Pods-always-fresh.debug.xcconfig */,
+				E90378FF1363710B6B5D0497 /* Pods-always-fresh.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 231FCD7E2880A56E0064AAF9 /* Build configuration list for PBXNativeTarget "always-fresh" */;
 			buildPhases = (
+				A5F3300EF08886F264607C9E /* [CP] Check Pods Manifest.lock */,
 				231FCD632880A56B0064AAF9 /* Sources */,
 				231FCD642880A56B0064AAF9 /* Frameworks */,
 				231FCD652880A56B0064AAF9 /* Resources */,
+				DAE8EBE1D8CF660717AF79D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,14 +211,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A5F3300EF08886F264607C9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-always-fresh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAE8EBE1D8CF660717AF79D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-always-fresh/Pods-always-fresh-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-always-fresh/Pods-always-fresh-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-always-fresh/Pods-always-fresh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		231FCD632880A56B0064AAF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				231FCD6F2880A56B0064AAF9 /* ViewController.swift in Sources */,
+				23D319D12886160400B053CB /* ItemManager.swift in Sources */,
+				2397EC542887CF05002C065F /* SwipeTableViewController.swift in Sources */,
 				231FCD752880A56B0064AAF9 /* always_fresh.xcdatamodeld in Sources */,
 				231FCD872880B5860064AAF9 /* RecipeViewController.swift in Sources */,
+				2397EC522887C8EE002C065F /* UpdateItemViewController.swift in Sources */,
 				231FCD6B2880A56B0064AAF9 /* AppDelegate.swift in Sources */,
 				232DDF062884F6D800457F3F /* ItemCell.swift in Sources */,
 				23D319CF2885DAC900B053CB /* addItemViewController.swift in Sources */,
@@ -330,6 +410,7 @@
 		};
 		231FCD7F2880A56E0064AAF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D063FA8FA845F5394175F2AF /* Pods-always-fresh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +439,7 @@
 		};
 		231FCD802880A56E0064AAF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90378FF1363710B6B5D0497 /* Pods-always-fresh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

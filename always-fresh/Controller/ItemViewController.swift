@@ -8,7 +8,9 @@
 import UIKit
 import CoreData
 
-class ItemViewController: UITableViewController {
+
+class ItemViewController: SwipeTableViewController{
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     //set item array to be an array of Item objects defined in CoreData.
@@ -16,20 +18,27 @@ class ItemViewController: UITableViewController {
     
     //create a container to temp store info before committing to CoreData.
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
         loadItems()
         
-        //set tableviewcells to customized nib
+//        set tableviewcells to customized nib
         tableView.register(UINib(nibName:"ItemCell", bundle: nil), forCellReuseIdentifier:"foodItemCell")
+        searchBar.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
+        loadItems()
+    }
+  
 
     // MARK: - TABLEVIEW DATASOURCE METHODS
-    
-  
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return itemArray.count
@@ -37,32 +46,31 @@ class ItemViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = itemArray[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodItemCell", for: indexPath) as! ItemCell
+        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! ItemCell
         cell.item.text = item.title
         cell.quantity.text = item.quantity
         cell.unit.text = item.units
         cell.expiryDate.text = item.expiryDate
+        
         return cell
     }
     
     //MARK: - TABLEVIEW DELEGATE METHODS
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        itemArray[indexPath.row].done = !itemArray[indexPath.row].done
-        saveItems()
+              
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
 
     //MARK: - ADD NEW ITEMS
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
+
         performSegue(withIdentifier: "goToAddItem", sender: self)
+
     }
-
-
-        
-
+    
 
 //MARK: - MODEL MANIPULATION
 
@@ -74,11 +82,13 @@ class ItemViewController: UITableViewController {
         }
         
         self.tableView.reloadData()
-        
-        
+
     }
+    
     //load items with default arguments for Item being fetched being and default predicate for querying.
     func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest()) {
+        
+        request.sortDescriptors = [NSSortDescriptor (key:"expiryDate", ascending: true)]
         
         do{
             itemArray = try context.fetch(request)
@@ -87,6 +97,7 @@ class ItemViewController: UITableViewController {
         }
         tableView.reloadData()
     }
+    
 }
     //MARK: - SEARCH BAR METHODS
 extension ItemViewController: UISearchBarDelegate{
@@ -105,4 +116,16 @@ extension ItemViewController: UISearchBarDelegate{
             }
         }
     }
+    
+    // MARK: DELETE DATA FROM SWIPE
+    override func updateModel(at indexPath: IndexPath) {
+        print(itemArray.count)
+        context.delete(itemArray[indexPath.row])
+        itemArray.remove(at:indexPath.row)
+        print(itemArray.count)
+
+        saveItems()
+
+    }
 }
+
