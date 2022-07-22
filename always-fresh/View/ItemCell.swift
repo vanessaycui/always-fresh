@@ -11,8 +11,8 @@ import SwipeCellKit
 class ItemCell: SwipeTableViewCell {
     
     @IBOutlet weak var item: UILabel!
-    @IBOutlet weak var quantity: UILabel!
-    @IBOutlet weak var unit: UILabel!
+//    @IBOutlet weak var quantity: UILabel!
+//    @IBOutlet weak var unit: UILabel!
     @IBOutlet weak var expiryDate: UILabel!
     
     override func awakeFromNib() {

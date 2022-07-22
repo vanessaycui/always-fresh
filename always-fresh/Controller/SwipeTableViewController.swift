@@ -12,7 +12,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight = 70
     }
     
     //DataSource methods
@@ -33,14 +33,22 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
             // handle action by updating model with deletion
             
-            print("delete Cell")
+     
             self.updateModel(at: indexPath)
         }
 
         // customize the action appearance
-        deleteAction.image = UIImage(named: "delete")
+        deleteAction.image = UIImage(named: "delete-icon")
+        
+        
+        let moreAction = SwipeAction(style:.default, title: "More"){ action, indexPath in
 
-        return [deleteAction]
+            self.updateItem(at: indexPath)
+            
+        }
+        moreAction.image = UIImage(named:"more-icon")
+
+        return [deleteAction, moreAction]
     }
     func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
         var options = SwipeOptions()
@@ -51,9 +59,12 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     
     @objc open dynamic func updateModel(at indexPath: IndexPath){
         //update datamodel
-
-
     }
     
+    
+    @objc open dynamic func updateItem(at indexPath: IndexPath){
+        //update Item
+    }
+
 
 }

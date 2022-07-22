@@ -19,6 +19,8 @@ class ItemViewController: SwipeTableViewController{
     //create a container to temp store info before committing to CoreData.
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var currentIndexPath: Int?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +50,7 @@ class ItemViewController: SwipeTableViewController{
         let item = itemArray[indexPath.row]
         let cell = super.tableView(tableView, cellForRowAt: indexPath) as! ItemCell
         cell.item.text = item.title
-        cell.quantity.text = item.quantity
-        cell.unit.text = item.units
-        cell.expiryDate.text = item.expiryDate
+        cell.expiryDate.text = String(item.expiryDate)
         
         return cell
     }
@@ -97,7 +97,6 @@ class ItemViewController: SwipeTableViewController{
         }
         tableView.reloadData()
     }
-    
 }
     //MARK: - SEARCH BAR METHODS
 extension ItemViewController: UISearchBarDelegate{
@@ -123,9 +122,22 @@ extension ItemViewController: UISearchBarDelegate{
         context.delete(itemArray[indexPath.row])
         itemArray.remove(at:indexPath.row)
         print(itemArray.count)
-
         saveItems()
-
+    }
+    
+    // MARK: Update Data on Swipe
+    override func updateItem(at indexPath: IndexPath) {
+        currentIndexPath = indexPath.row
+        performSegue(withIdentifier: "goToUpdateItem", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToUpdateItem"{
+            let destinationVC = segue.destination as! UpdateItemViewController
+            destinationVC.selectedItem = currentIndexPath
+            destinationVC.itemArray = itemArray
+         
+        }
     }
 }
 

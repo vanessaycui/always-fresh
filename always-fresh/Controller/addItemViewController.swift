@@ -11,11 +11,10 @@ import CoreData
 
 class addItemViewController: UIViewController {
   
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var itemName: UITextField!
+    
+    @IBOutlet weak var item: UITextField!
     @IBOutlet weak var shelfLifeLabel: UILabel!
-    @IBOutlet weak var unitPicker: UIPickerView!
+   // @IBOutlet weak var unitPicker: UIPickerView!
     
     var ItemArray = [Item]()
     
@@ -27,8 +26,8 @@ class addItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        unitPicker.dataSource = self
-        unitPicker.delegate = self
+//        unitPicker.dataSource = self
+//        unitPicker.delegate = self
     }
     
     
@@ -41,8 +40,8 @@ class addItemViewController: UIViewController {
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
         let newItem = Item(context: self.context)
-        newItem.title = itemName.text
-        newItem.expiryDate = shelfLifeLabel.text
+        newItem.title = item.text
+        newItem.expiryDate = Int32(shelfLifeLabel.text!) ?? 0
         
         
         
@@ -72,28 +71,28 @@ class addItemViewController: UIViewController {
     
 }
 
-//MARK: - UIPICKERVIEWDATASOURCE
-extension addItemViewController: UIPickerViewDataSource{
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.itemManager.unitArray[component].count
-    }
-    
-}
-
-//MARK: - UIPICKERVIEWDELEGATE
-
-extension addItemViewController: UIPickerViewDelegate{
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return itemManager.unitArray[component][row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(itemManager.unitArray[0][pickerView.selectedRow(inComponent:0)])
-        print(itemManager.unitArray[1][pickerView.selectedRow(inComponent:1)])
-    }
-}
+////MARK: - UIPICKERVIEWDATASOURCE
+//extension addItemViewController: UIPickerViewDataSource{
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 2
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return self.itemManager.unitArray[component].count
+//    }
+//
+//}
+//
+////MARK: - UIPICKERVIEWDELEGATE
+//
+//extension addItemViewController: UIPickerViewDelegate{
+//
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return itemManager.unitArray[component][row]
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        print(itemManager.unitArray[0][pickerView.selectedRow(inComponent:0)])
+//        print(itemManager.unitArray[1][pickerView.selectedRow(inComponent:1)])
+//    }
+//}
